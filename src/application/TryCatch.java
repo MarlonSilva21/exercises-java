@@ -7,6 +7,14 @@ public class TryCatch {
 
     public static void main(String[] args) {
 
+        method2();
+
+        System.out.println("End of program");
+
+    }
+
+    public static void method2(){
+
         Scanner sc = new Scanner(System.in);
 
         try{
@@ -21,8 +29,6 @@ public class TryCatch {
         catch (InputMismatchException err){
             System.out.println("Input error");
         }
-
-        System.out.println("End of program");
 
         sc.close();
     }
