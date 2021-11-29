@@ -25,7 +25,6 @@ public class TryCatchFinally {
             if (sc != null){
                 sc.close();
             }
-
         }
     }
 }
