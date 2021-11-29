@@ -16,17 +16,17 @@ public class RentalService {
         this.taxService = taxService;
     }
 
-    public void ProcessInvoice(CarRental carRental) {
+    public void processInvoice(CarRental carRental) {
         long t1 = carRental.getStart().getTime();
         long t2 = carRental.getFinish().getTime();
-        double hours = (double)(t2 - t1) / 1000/ 60 / 60;
+        double hours = (double)(t2 - t1) / 1000 / 60 / 60;
 
         double basicPayment;
         if (hours <= 12.0) {
-            basicPayment = Math.ceil(hours) * pricePerHours;
+            basicPayment = pricePerHours * Math.ceil(hours);
         }
         else {
-            basicPayment = Math.ceil(hours) * pricePerDay;
+            basicPayment = pricePerDay * Math.ceil(hours / 24);
         }
 
         double tax = taxService.tax(basicPayment);
