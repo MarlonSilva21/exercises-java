@@ -11,7 +11,6 @@ public class ProgramExerciseMap {
 
     public static void main(String[] args) {
 
-
         Scanner sc = new Scanner(System.in);
 
         Map<String, Integer> votes = new LinkedHashMap<>();
