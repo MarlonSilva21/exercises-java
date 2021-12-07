@@ -4,7 +4,6 @@ import consumer.entities.Product;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 import java.util.stream.Collectors;
 
 public class Program {
@@ -21,5 +20,10 @@ public class Program {
         List<String> namesWithUpperCase = list.stream().map(product -> product.getName().toUpperCase()).collect(Collectors.toList());
 
         namesWithUpperCase.forEach(System.out::println);
+
+        List<Product> namesWithT = list.stream().filter(product -> product.getName().charAt(0) == 'T').collect(Collectors.toList());
+
+        namesWithT.forEach(System.out::println);
+
     }
 }

@@ -31,9 +31,10 @@ public class Product {
 
     @Override
     public String toString() {
-        return "ProductComparator{" +
+        return "Product{" +
                 "name='" + name + '\'' +
                 ", price=" + price +
                 '}';
     }
 }
+
