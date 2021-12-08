@@ -18,8 +18,10 @@ public class example {
         Integer numero2 = converteEmNumero(s).orElseThrow(() -> new NullPointerException("Valor vazio")); //orElseThrow lança uma excessão
         System.out.println(numero2);
 
-
-
+        /*
+        * Optional é recomendavel apenas como retorno de método
+        * e nao se deve aceitar um optional como parametro para o mesmo
+        * */
     }
 
     public static Optional<Integer> converteEmNumero(String numeroStr){
